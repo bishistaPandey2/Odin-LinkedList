@@ -1,4 +1,4 @@
-class LinkedList(){
+class LinkedList{
 	constructor(){
 		this.head = null
 	}
@@ -15,10 +15,10 @@ class LinkedList(){
 
 		let current = this.head
 		while (current.nextNode !== null){
-			current = current.next
+			current = current.nextNode
 		}
 
-		current.next = newNode
+		current.nextNode = newNode
 		return this
 	}
 
@@ -66,11 +66,17 @@ class LinkedList(){
 	}
 
 	at(index){
+		if(this.head === null) return undefined
 		let current = this.head
-		if(current = null) return undefined 
-
-		for(let i = 0; i<index; i++){
+		let i = 0;
+		let counter = 0;
+		while(current.nextNode !== null && i<index){
 			current = current.nextNode
+			counter++;
+			i++
+		}
+		if(counter < index){
+			return undefined
 		}
 
 		return current.value
@@ -83,9 +89,18 @@ class LinkedList(){
 		this.head = current
 	}
 }
-class Node(){
+class Node{
 	constructor(value){
-		this.value = null
+		this.value = value 
 		this.nextNode = null
 	}
 }
+
+const list = new LinkedList()
+list.append("Apple")
+list.append("Banana")
+list.append("pine")
+list.append("guava")
+let n1ode = list.at(3)
+console.log(n1ode)
+console.log(list)
