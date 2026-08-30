@@ -14,8 +14,11 @@ list.append("babboon")
 
 const head =list.headNode()
 const tail = list.tail()
-let nThNode = list.at(4)
+const nThNode = list.at(4)
+const nodeValue = "eagle"
+const thereOrNot = list.contains(nodeValue)
 
+console.log(`The ${nodeValue} exists there ?= ${thereOrNot}`)
 console.log(`The size of the linked list is ${list.size()}`)
 console.log(`This is ${nThNode}th node = ${nThNode}`)
 console.log("This is linked list = " + list)
