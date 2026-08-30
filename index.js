@@ -51,7 +51,7 @@ class LinkedList{
 		return counter
 	}
 
-	head(){
+	headNode(){
 		if(this.head === null) return undefined
 		return this.head.value
 	}
@@ -99,8 +99,11 @@ class Node{
 const list = new LinkedList()
 list.append("Apple")
 list.append("Banana")
-list.append("pine")
-list.append("guava")
-let n1ode = list.at(3)
+list.append("Pine")
+list.append("Guava")
+list.prepend("Grapes")
+const head =list.headNode()
+let n1ode = list.at(5)
 console.log(n1ode)
 console.log(list)
+console.log(head)
