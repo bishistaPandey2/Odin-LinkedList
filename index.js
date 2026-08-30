@@ -62,16 +62,25 @@ class LinkedList(){
 			current = current.nextNode
 		}
 
-		return current;
+		return current
 	}
 
 	at(index){
 		let current = this.head
 		if(current = null) return undefined 
+
 		for(let i = 0; i<index; i++){
 			current = current.nextNode
 		}
+
 		return current.value
+	}
+
+	pop(){
+		if(this.head === null) return undefined
+		let current = this.head 
+		current = current.nextNode
+		this.head = current
 	}
 }
 class Node(){
