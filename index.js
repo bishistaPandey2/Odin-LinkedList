@@ -96,14 +96,4 @@ class Node{
 	}
 }
 
-const list = new LinkedList()
-list.append("Apple")
-list.append("Banana")
-list.append("Pine")
-list.append("Guava")
-list.prepend("Grapes")
-const head =list.headNode()
-let n1ode = list.at(5)
-console.log(n1ode)
-console.log(list)
-console.log(head)
+export {LinkedList}
