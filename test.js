@@ -12,8 +12,10 @@ list.append("turtle");
 list.prepend("eagle")
 
 const head =list.headNode()
+const tail = list.tail()
 let nThNode = list.at(4)
 
-console.log(nThNode)
-console.log(list)
-console.log(head)
+console.log(`This is ${nThNode}th node = ${nThNode}`)
+console.log("This is linked list = " + list)
+console.log("This is head = " + head)
+console.log("This is tail = " + tail)

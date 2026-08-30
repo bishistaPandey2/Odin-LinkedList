@@ -62,7 +62,7 @@ class LinkedList{
 			current = current.nextNode
 		}
 
-		return current
+		return current.value
 	}
 
 	at(index){
