@@ -100,6 +100,29 @@ class LinkedList{
 
 		return false
 	}
+
+	findIndex(value){
+		if(this.head === null) return undefined
+		let current = this.head
+		let counter = 0
+		while(current !== null ){
+			if(current.value === value) return counter
+			current = current.nextNode
+			counter++
+		}
+		return undefined
+	}
+
+	toString(){
+		if(this.head === null) return undefined
+		let current = this.head
+		let stringList = ''
+		while(current !== null){
+			stringList += `(${current.value}) -> `
+			current = current.nextNode
+		}
+		return `${stringList} null`
+	}
 }
 class Node{
 	constructor(value){

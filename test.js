@@ -15,9 +15,13 @@ list.append("babboon")
 const head =list.headNode()
 const tail = list.tail()
 const nThNode = list.at(4)
-const nodeValue = "eagle"
+const nodeValue = "snake"
 const thereOrNot = list.contains(nodeValue)
+const nodeIndex = list.findIndex(nodeValue)
+// const stringList = list.toString()
 
+// console.log(`${stringList}`)
+console.log(nodeIndex)
 console.log(`The ${nodeValue} exists there ?= ${thereOrNot}`)
 console.log(`The size of the linked list is ${list.size()}`)
 console.log(`This is ${nThNode}th node = ${nThNode}`)
