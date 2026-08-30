@@ -2,6 +2,9 @@ class LinkedList(){
 	constructor(){
 		this.head = null
 	}
+	headChecker(value){
+		if(value === null) return undefined
+	}
 	append(value){
 		const newNode = new Node(value)
 
@@ -60,6 +63,15 @@ class LinkedList(){
 		}
 
 		return current;
+	}
+
+	at(index){
+		let current = this.head
+		if(current = null) return undefined 
+		for(let i = 0; i<index; i++){
+			current = current.nextNode
+		}
+		return current.value
 	}
 }
 class Node(){
